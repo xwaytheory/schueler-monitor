@@ -3,6 +3,9 @@
 Stały monitor wiadomości o sprawie **Richarda Jamesa Schuelera** (ps. *Richard Heart*, *Balina James*),
 zatrzymanego 14.10.2026 w Stambule na podstawie **czerwonej noty Interpolu**.
 
+**Przegląd kodu:** zacznij od `REVIEW-GUIDE.md` — mapa modułów, trasy, model danych,
+wykluczenia i znane ograniczenia.
+
 System skanuje **wszystkie 118 źródeł** w każdym cyklu. Interwał i równoległość pobierania
 są konfigurowane przez `SCAN_INTERVAL_SEC` (domyślnie 360 s; w tej instalacji 180 s),
 `FAST_SCAN_INTERVAL_SEC` (szybka ścieżka oficjalna: 30 s) oraz `MAX_FETCH_CONCURRENCY`

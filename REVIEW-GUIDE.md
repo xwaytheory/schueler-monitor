@@ -162,3 +162,15 @@ code. The large MP4 files in `public/media/` are not included.
 `deploy/` contains the systemd units and nginx example. Production runs the service
 behind nginx; deployment is `scp` + `systemctl restart schueler-monitor`. Nothing in
 this repo needs to be deployed for the review.
+
+## Suggested review prompt
+
+> Review this repository as a senior full-stack engineer and editorial UX reviewer.
+> The public site is rendered by `src/web-public.js` and `src/web-ui.js`; start there,
+> then follow `src/facts.js`, `src/i18n.js` and `src/web.js`. Check Polish/English
+> parity, responsive layout, accessibility, escaping/XSS, auth boundaries, SQLite
+> queries, deduplication and event-grouping logic, and dead or misleading UI states.
+> Run `npm test` after changes and keep the suite green. Do not invent or “correct”
+> factual claims about the case: the editorial layer is manually sourced and dated.
+> Do not add npm dependencies or a build step. Preserve the existing visual language
+> and the separation between the public page and `/ops`.
