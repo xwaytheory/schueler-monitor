@@ -1,0 +1,16 @@
+{
+  "name": "schueler-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Monitor wiadomosci o sprawie Richarda Jamesa Schuelera (Richard Heart / HEX / PulseChain) -> Discord + strona publiczna + panel /ops",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node --no-warnings src/index.js",
+    "scan": "node --no-warnings src/cli-scan.js",
+    "channel": "node --no-warnings src/cli-channel.js",
+    "health": "node --no-warnings src/cli-source-health.js",
+    "digest": "node --no-warnings src/cli-digest.js",
+    "test": "node --no-warnings --test \"test/*.test.js\""
+  }
+}

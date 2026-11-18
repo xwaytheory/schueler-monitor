@@ -1,0 +1,18 @@
+[Unit]
+Description=Monitor sprawy Schueler (Richard Heart / HEX / PulseChain) -> Discord
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/schueler-monitor
+EnvironmentFile=/home/ubuntu/schueler-monitor/.env
+ExecStart=/usr/local/bin/node --no-warnings src/index.js
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

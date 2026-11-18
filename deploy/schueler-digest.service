@@ -1,0 +1,10 @@
+[Unit]
+Description=Schueler monitor - daily change digest
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/home/ubuntu/schueler-monitor
+ExecStart=/usr/local/bin/node --no-warnings src/cli-digest.js --hours=24 --discord

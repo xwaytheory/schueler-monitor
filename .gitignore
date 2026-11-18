@@ -1,0 +1,13 @@
+node_modules/
+data/
+.env
+*.log
+.pq/
+
+# Runtime artefacts
+*.db
+*.db-shm
+*.db-wal
+
+# Large media served from the production host, not stored in git
+public/media/*.mp4
